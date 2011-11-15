@@ -23,7 +23,7 @@ body {
 	font-family: 'MuseoSans500Regular', Verdana, sans-serif;
 	margin: 0;
 	padding: 0;
-    background-image: url('/static/static_media/bg_final.jpg');
+    background-image: url('/static/img/bg_final.jpg');
     background-attachment: fixed;
 	font-size: 100%; /* 16px */
 }
