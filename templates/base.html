@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description"
+	content="Local Wiki - Collaborative, community-owned local media" />
+<link rel="image_src"
+	href="http://localwiki.org/static/static_media/big_logo.png"/ >
+<meta name="keywords"
+	content="Local, Wiki, Local Wiki, Davis, Wiki, DavisWiki, Davis Wiki, Philip Neustrom, Knight Foundation, News" />
+
+<link rel="stylesheet" type="text/css" href="/static/css/screen.css?v=5" />
+<link rel="stylesheet" href="/static/css/typefaces.css" type="text/css"
+	media="screen" />
+<link rel="shortcut icon" href="/static/static_media/tinylogo_tiny2.png"
+	type="image/png" />
+<link rel=alternate type="application/rss+xml" href="/feeds/latest" title="LocalWiki blog RSS feed"> 
+<title>{% block title %}LocalWiki - Collaborative,
+community-owned local media{% endblock %}</title>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25465476-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="everything">
+
+<div id="header"><a href="/"><img
+	src="/static/static_media/logo.png" /></a></div>
+
+<div id="transparent"></div>
+
+<div id="slogan">
+<h1>Connecting the people, places and events that shape our
+communities.</h1>
+</div>
+
+<div id="main">
+<div class="actionArea" style="padding-top: 30px; margin-left: 40px; margin-bottom: 20px; width: 350px">
+  <h4><a href="/pilot_recommendation">Recommend a community</a></h4>
+  <div class="pilot" style="text-align: center; margin-top: 5px;">
+    <p>We need your help finding great pilot communities for the
+    project! Have an idea? Please <strong><a
+      href="/pilot_recommendation">let us know!</a></strong></p>
+  </div>
+
+  <div class="signup">
+    <h4>Help out & get more info!</h4>
+    <div style="text-align: center; margin-top: 2px;">
+      <p>Help out and get more information as we get started. This is an
+      entirely open source effort, from the start!</p>
+      {{ form.email.errors }}
+      <form method="POST" action="/signup/">Email: <input id="id_email"
+        name="email" maxlength="200" type="text" /> <input type="image"
+        id="signup_submit" src="/static/static_media/signup.png" value="Submit"
+        alt="Submit"></form>
+    </div>
+  </div>
+</div>
+
+<div class="content_title">{% block content_title %}{% endblock %}</div>
+
+<div class="blog">{% block content %}{% endblock %}</div>
+
+<div id="footer">
+{% include "nav.html" %}
+<div class="note">
+<p>For questions, media inquiries or, well, just about anything,
+email <a href="mailto:contact@localwiki.org">contact@localwiki.org</a>.</p>
+<p>{#Supported by a Knight News Challenge grant from the <a href="http://knightfoundation.org">John S. and James L. Knight Foundation</a>.#} We are a 501(c)3 non-profit organization. Content on this site is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0 Unported License</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,389 @@
+/* COLOR 
+	
+	Blue: #0074ba
+	Green: #2cad54
+	Border: #c8c9c1
+	Slogan, hover: #2a2a2a
+	
+*/
+
+/* GENERAL */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+	font-family: 'MuseoSans500Regular', Verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+    background-image: url('/static/static_media/bg_final.jpg');
+    background-attachment: fixed;
+	font-size: 100%; /* 16px */
+}
+
+a {
+   color: #0074ba;
+   text-decoration: none;
+}
+a:link {
+   text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+a img { border: none; }
+
+#everything {
+   width: 1000px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 60px;
+   padding-bottom: 1em;
+}
+
+h1 {
+	font-size: 1.5em; /* 24px */
+	color: #0074ba;
+	font-weight: normal;
+	margin: 0;
+	text-transform: uppercase;
+	margin-bottom: 0.8em; 
+}
+h2 {
+	font-size: 1.313em; /* 21px */
+	font-weight: normal;
+	margin: 0;
+	text-transform: uppercase;
+	margin-bottom: 0.625em; 
+}
+h3 {
+	font-size: 1.125em; /* 18px */
+	color: #0074ba;
+	font-weight: normal;
+	margin: 0;
+	text-transform: uppercase;
+	margin-bottom: 0.625em; 
+}
+h4 {
+	font-size: 1em; /* 16px */
+	color: #0074ba;
+	font-weight: normal;
+	margin: 0;
+	text-transform: uppercase;
+}
+p {
+	font-size: 0.875em; /* 12px */
+    margin-bottom: 1.2em;
+}
+
+/* HEADER */
+
+#header {
+	width: 1125px;
+	height: 90px;
+	background-color: white;
+	border: 1px solid #c8c9c1;
+	border-bottom: none;
+        margin-top: -1px;
+}
+
+#header img {
+	float: left;
+	margin-top: 18px;
+	margin-left: 30px;
+	border-style: none;
+}
+
+/* CONTENT */
+
+#main {
+	width: 1125px;
+	background-color: white;
+    border: 1px solid #c8c9c1;
+	border-top: none;
+    padding-bottom: 1em;
+    padding-top: 0.1em;
+}
+
+#mainGeneral {
+    width: 1125px;
+    background-color: white;
+    border: 1px solid #c8c9c1;
+    border-top: none;
+}
+
+.donateAsk {
+    font-size: 130%;
+    background-color: 	#F5F5F5;
+    -moz-border-radius: 0.652em;
+    -webkit-border-radius: 0.652em;
+    border-radius: 0.652em;
+    padding: 1em;
+}
+.donateAsk .donateButton {
+    float: left;
+    margin-right: 0.7em;
+}
+
+#transparent {
+	width: 1125px;
+	height: 6.125em; /* 50px */
+	background-color: white;
+	filter:alpha(opacity=60);-moz-opacity:0.6;-khtml-opacity: 0.6;opacity: 0.6;
+	border-left: 1px solid #c8c9c1;
+	border-right: 1px solid #c8c9c1;
+}
+
+#slogan {
+        width: 1125px;
+        height: 6.125em;
+        text-align: center;
+        position: absolute;
+        margin-top: -4em;
+}
+#slogan h1 {
+	text-transform: none;
+	color: #454545;
+}
+
+#pilot_recommendation input, #pilot_recommendation textarea {
+    border: 2px solid #bababa;
+}
+#pilot_submit {
+    padding: 10px;
+    font-size: 120%;
+}
+
+.mission  {
+	width: 615px;
+	line-height: 1.125em; /* 18px */
+        padding-top: 42px;
+	margin: 0 0 30px 30px;
+}
+
+.pilot {
+	width: 615px;
+	line-height: 1.125em; /* 18px */
+	margin: 0 0 30px 30px;
+}
+
+.about {
+	width: 615px;
+	height: 21.875em; /* 350px */
+	line-height: 1.125em; /* 18px */
+	margin: 42px 0 30px 30px;
+}
+
+.about h1 {
+	margin-bottom: 10px;
+}
+
+
+.faq {
+	float: left;
+	width: 615px;
+	height: 21.875em; /* 350px */
+	line-height: 1.125em; /* 18px */
+	margin: 42px 0 30px 30px;
+}
+
+.faq h2 {
+	margin-bottom: 10px;
+}
+
+.faq li {
+	list-style: none;
+	font-size: 0.875em; /* 12px */
+}
+
+.signup {
+    position: absolute;
+	width: 390px;
+	background-color: 	#F5F5F5;
+	margin: 150px 30px 30px 680px;
+    -moz-border-radius: 0.652em;
+    -webkit-border-radius: 0.652em;
+    border-radius: 0.652em;
+    padding: 10px;
+}
+.signup p {
+    text-align: left!important;
+    margin-left: 1.7em;
+    margin-right: 1.5em;
+}
+
+.signup h2 {
+	margin-top: 0.625em;
+	text-align: center;
+	color: #2cad54;
+}
+
+.signup form {
+   margin-left: 1.7em;
+   text-align: left;
+   padding-bottom: 15px;
+}
+#id_email {
+   width: 11em;
+   border: 2px solid #bababa;
+   margin-left: 4px;
+   margin-right: 4px;
+}
+#signup_submit {
+  position: absolute;
+  margin-left: 8px;
+  margin-top: -3px;
+}
+
+.kickstarter {
+    position: absolute;
+	width: 390px;
+	background-color: 	#F5F5F5;
+	margin: 30px 30px 30px 680px;
+    -moz-border-radius: 0.652em;
+    -webkit-border-radius: 0.652em;
+    border-radius: 0.652em;
+    padding: 10px;
+}
+
+.kickstarter h2 {
+	margin-top: 0.625em;
+	text-align: center;
+	color: #2cad54;
+}
+
+.kickstarter p {
+	padding: 0 0.625em 0 0.625em;
+}
+
+.kickstarter img {
+	border-style: none;
+}
+
+.kickstarter a {
+    color: #2cad54;
+}
+
+.completedescription {
+	margin: 0 0 30px 30px;
+    width: 615px;
+}
+
+#footer {
+    clear: both;
+    padding-top: 2em;
+    text-align: center;
+}
+
+.links {
+	width: 62.5em; /* 1000px */
+	height: 1.375em; /* 22px */
+	text-align: center;
+	padding-top: 0.652em; /* 10px */
+}
+
+.links li {
+	display: inline;
+	padding-left: 0.652em; /* 10px */
+}
+
+.links a {
+	text-decoration: none;
+	color: #0074ba;
+	font-size: 0.875em; /* 12px */
+}
+
+.links a:hover {
+	color: #2a2a2a;
+}
+
+.note {
+	font-size: 0.75em; /* 8px */
+	text-align: center;
+	padding-top: 0.652em; /* 10px */
+}
+
+.completedescription h2 {
+    color:#0074ba!important;
+}
+
+p {
+    line-height: 1.5;
+}
+
+#supporters {
+	margin: 42px 0 30px 30px;
+}
+#supporters .miniDonateAsk {
+    clear: both;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    font-size: 110%;
+    background-color: 	#F5F5F5;
+    -moz-border-radius: 0.652em;
+    -webkit-border-radius: 0.652em;
+    border-radius: 0.652em;
+    margin-bottom: 2em;
+    margin-right: 2em;
+}
+#supporters .donateButton {
+    margin-top: 0;
+    margin-right: 1em;
+    float: left;
+}
+#supporters a {
+    color: #0074ba;
+}
+#supporters h1, #supporters h2 {
+    color: #2cad54;
+}
+#supporters h1 a, #supporters h2 a {
+    color: #2cad54!important;
+}
+#supporters ul {
+    list-style: none;
+    margin-bottom: 1.5em;
+    font-size: 0.875em; /* 12px */
+}
+#supporters li {
+    margin-bottom: 0.5em;
+    padding-right: 2em;
+    margin-top: 0.5em;
+    display: inline-block;
+    float: left;
+}
+#otherSupporters, #foundingSupporters {
+    clear: both;
+    padding-top: 2em;
+}
+#essentialSupporters ul {
+    margin-left: 0.5em;
+}
+#essentialSupporters li {
+    height: 50px;
+    vertical-align: bottom;
+    display: block!important;
+}
+#supporters a {
+    color: black;
+}
+#essentialSupporters .name {
+   margin-top: 25px;
+}
+
+
+.errorlist {
+   background-color: #afadff;
+   list-style: none;
+   padding: 0.3em;
+   margin: 0;
+}
+.errorlist {
+   margin-bottom: 0.5em;
+}
