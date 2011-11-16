@@ -1,89 +1,95 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html>
+    <head>
+        <title>{% block title %}LocalWiki - Collaborative,
+            community-owned local media{% endblock %}</title>
+        <link href='{{ STATIC_URL }}css/reset.css' rel='stylesheet' type='text/css'>
+        <link href='{{ STATIC_URL }}css/new_splash.css' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    </head>
+    <script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-25465476-3']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script');
+			ga.type = 'text/javascript';
+			ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(ga, s);
+		})();
 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="description"
-	content="Local Wiki - Collaborative, community-owned local media" />
-<link rel="image_src"
-	href="http://localwiki.org/static/img/big_logo.png"/ >
-<meta name="keywords"
-	content="Local, Wiki, Local Wiki, Davis, Wiki, DavisWiki, Davis Wiki, Philip Neustrom, Knight Foundation, News" />
-
-<link rel="stylesheet" type="text/css" href="/static/css/screen.css?v=5" />
-<link rel="stylesheet" href="/static/css/typefaces.css" type="text/css"
-	media="screen" />
-<link rel="shortcut icon" href="/static/img/tinylogo_tiny2.png"
-	type="image/png" />
-<link rel=alternate type="application/rss+xml" href="/feeds/latest" title="LocalWiki blog RSS feed"> 
-<title>{% block title %}LocalWiki - Collaborative,
-community-owned local media{% endblock %}</title>
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-25465476-3']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-</head>
-
-<body>
-<div id="everything">
-
-<div id="header"><a href="/"><img
-	src="/static/img/logo.png" /></a></div>
-
-<div id="transparent"></div>
-
-<div id="slogan">
-<h1>Connecting the people, places and events that shape our
-communities.</h1>
-</div>
-
-<div id="main">
-<div class="actionArea" style="padding-top: 30px; margin-left: 40px; margin-bottom: 20px; width: 350px">
-  <h4><a href="/pilot_recommendation">Recommend a community</a></h4>
-  <div class="pilot" style="text-align: center; margin-top: 5px;">
-    <p>We need your help finding great pilot communities for the
-    project! Have an idea? Please <strong><a
-      href="/pilot_recommendation">let us know!</a></strong></p>
-  </div>
-
-  <div class="signup">
-    <h4>Help out & get more info!</h4>
-    <div style="text-align: center; margin-top: 2px;">
-      <p>Help out and get more information as we get started. This is an
-      entirely open source effort, from the start!</p>
-      {{ form.email.errors }}
-      <form method="POST" action="/signup/">Email: <input id="id_email"
-        name="email" maxlength="200" type="text" /> <input type="image"
-        id="signup_submit" src="/static/img/signup.png" value="Submit"
-        alt="Submit"></form>
-    </div>
-  </div>
-</div>
-
-<div class="content_title">{% block content_title %}{% endblock %}</div>
-
-<div class="blog">{% block content %}{% endblock %}</div>
-
-<div id="footer">
-{% include "nav.html" %}
-<div class="note">
-<p>For questions, media inquiries or, well, just about anything,
-email <a href="mailto:contact@localwiki.org">contact@localwiki.org</a>.</p>
-<p>{#Supported by a Knight News Challenge grant from the <a href="http://knightfoundation.org">John S. and James L. Knight Foundation</a>.#} We are a 501(c)3 non-profit organization. Content on this site is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0 Unported License</a>.</p>
-</div>
-</div>
-</div>
-</div>
-
-</body>
-
+    </script>
+    <body>
+        <a href="http://github.com/localwiki/sapling"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/abad93f42020b733148435e2cd92ce15c542d320/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub"></a>
+        <div class="header">
+            <a href="/"><img src="{{ STATIC_URL }}img/logo.png" style="border: none;" alt="LocalWiki"></a>
+            {% include "nav.html" %}
+        </div>
+        <div class="content">
+            {% block content %}{% endblock %}
+            <div class="section bottom">
+                <div class="links">
+                    <div class="supporters">
+                        <h2>Supported by</h2>
+                        <ul>
+                            <li>
+                                <a href="http://www.knightfoundation.org/grants/20094016/"><img src="{{ STATIC_URL }}img/kflogo.png"></a>
+                            </li>
+                            </li>
+                            <li>
+                                And <a href="/about">over 400 individual backers</a>
+                            </li>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="code">
+                        <h2>Get the code</h2>
+                        <div class="getcode"><img src="{{ STATIC_URL }}img/osi_grayscale.png"/>
+                            <p>
+                                Our software is free and open-source.  Check out our <a href="http://code.localwiki.org">developer site</a> for detailed instructions about how to get the software and contribute.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about">
+                    <h2>Our story</h2>
+                    <p>
+                        In 2004 we started the <a href="http://daviswiki.org">Davis
+                        Wiki</a>, an experimental project to collect and share interesting
+                        information about the town of Davis, California, editable by anyone,
+                        that soon became the world's largest and most vibrant community wiki.
+                    </p>
+                    <p>
+                        Today the residents of Davis use it for everything from learning
+                        about <a
+                        href="http://daviswiki.org/March_4%2C_2010_Public_Education_protest">local
+                        news</a> and <a href="http://daviswiki.org/Tank_house">local history</a> to
+                        helping return <a href="http://daviswiki.org/Lost_pets">lost pets</a> to
+                        their owners &mdash; and it's become the largest, most used media source
+                        in the city. In a week, nearly half of residents use the Davis Wiki; in a
+                        month, nearly everyone uses it. And <strong>1</strong> in <strong>7</strong>
+                        residents <strong>contribute</strong> material to the Davis Wiki.
+                    </p>
+                    <p>
+                        We want to help as many communities as possible
+                        realize the full potential of such an amazing, collaborative information
+                        resource.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            {% include "nav.html" %}
+            <div class="note">
+                <p>
+                    For questions, media inquiries or, well, just about anything,
+                    email <a href="mailto:contact@localwiki.org">contact@localwiki.org</a>.
+                </p>
+                <p>
+                    We are a 501(c)3 non-profit organization. Content on this site is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0 Unported License</a>.
+                </p>
+            </div>
+        </div>
+    </body>
 </html>

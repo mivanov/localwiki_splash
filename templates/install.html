@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="section install">
+    <h2>Installing on Ubuntu</h2>
+    <p>
+        LocalWiki is available as a prebuilt package for Ubuntu 10.04 LTS or newer.
+    </p>
+    <p>
+        Just open a terminal and run these commands:
+    </p>
+    <table class="commands">
+        <tbody>
+            <tr>
+                <td class="prompt">
+                <ul>
+                    <li>
+                        $
+                    </li>
+                    <li>
+                        $
+                    </li>
+                    <li>
+                        $
+                    </li>
+                    <li>
+                        &nbsp;
+                    </li>
+                    <li>
+                        $
+                    </li>
+                </ul></td>
+                <td>
+                <ul>
+                    <li>
+                        sudo apt-get install python-software-properties
+                    </li>
+                    <li>
+                        sudo apt-add-repository ppa:localwiki
+                    </li>
+                    <li>
+                        sudo apt-get update
+                    </li>
+                    <li>
+                        &nbsp;
+                    </li>
+                    <li>
+                        <strong>sudo apt-get install localwiki</strong>
+                    </li>
+                </ul></td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        That's it!  Follow the prompts to configure LocalWiki.
+    </p>
+    <p>
+        After installing, be sure to add your new project to the <a href="/guide">LocalWiki Guide</a>.
+    </p>
+    <h2>Upgrading</h2>
+    <p>
+        When a new version of LocalWiki is released, you should upgrade to it.  If you installed using the Ubuntu instructions above, then upgrading to a new release is very simple.
+    </p>
+    <p>
+        Run these commands to upgrade:
+    </p>
+    <table class="commands">
+        <tbody>
+            <tr>
+                <td class="prompt">
+                <ul>
+                    <li>
+                        $
+                    </li>
+                    <li>
+                        $
+                    </li>
+                </ul></td>
+                <td>
+                <ul>
+                    <li>
+                        sudo apt-get update
+                    </li>
+                    <li>
+                        sudo apt-get upgrade
+                    </li>
+                </ul></td>
+            </tr>
+        </tbody>
+        </table>
+        <p>
+            This will upgrade all of your packages, including LocalWiki.  All of your data will be preserved during the upgrade.
+        </p>
+    
+    <h2>Installing on other systems</h2>
+    <p>
+        If you have the option, we <em>strongly</em> recommend installing LocalWiki on Ubuntu 10.04 LTS.  It makes both installing and keeping LocalWiki up to date much easier.
+    </p>
+    <p>
+        If you still want to install on a different operating system, please read our <a href="http://code.localwiki.org">documentation</a> for detailed instructions.
+    </p>
+</div>
+<div class="section vision">
+    <div class="blurb right">
+        <a href="/guide" class="big_button">Find a project near you</a>
+    </div>
+    <h2>Not quite ready to install?</h2>
+    <p>
+        <a href="/guide">Find a LocalWiki project</a> in your area and collaborate with others to make it happen.
+    </p>
+</div>
+{% endblock %} 

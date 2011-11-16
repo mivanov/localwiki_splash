@@ -11,7 +11,7 @@
 {% endblock %}
 
 
-{% block content %}
+{% block blog_content %}
   <ul class="link_list">
     {% for tag in object_list %}
     <li><a href="{{ tag.get_absolute_url }}" title="{% trans "View posts tagged" %} {{ tag }}">{{ tag }}</a></li>

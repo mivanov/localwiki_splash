@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="section download">
+    <div class="video">
+        <iframe src="http://player.vimeo.com/video/30428641?title=0&amp;byline=0&amp;portrait=0" width="460" height="290" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+    </div>
+    <div class="blurb right">
+        <h2>LocalWiki is a tool for building community information hubs</h2>
+        <p>
+            <a href="{% url install %}">Download and install</a> our free software and get started in your community today!
+        </p>
+        <a href="{% url install %}" class="big_button">Download LocalWiki</a>
+    </div>
+</div>
+<div class="section vision">
+    <div class="blurb right">
+        <a href="/guide" class="big_button">Find a project near you</a>
+    </div>
+    <h2>A collaborative information hub in every community</h2>
+    <p>
+        That's our vision. <a href="/guide">Find a LocalWiki project</a> in your area and collaborate with others to make it happen.
+    </p>
+</div>
+<div class="section features">
+    <div class="feature">
+        <img src="{{ STATIC_URL }}img/features_edit.png"/>
+        <div class="description right">
+            <h2>Editing for everyone</h2>
+            <p>
+                Simple and powerful editing that requires no training or
+                technical knowledge.  Designed for accessibility and ease of use.
+            </p>
+        </div>
+    </div>
+    <div class="feature">
+        <img src="{{ STATIC_URL }}img/features_map.png">
+        <div class="description left">
+            <h2>Wikis with a sense of place</h2>
+            <p>
+                Beautiful editable maps give context to every article and
+                let you explore your community visually.
+            </p>
+        </div>
+    </div>
+    <div class="feature">
+        <img src="{{ STATIC_URL }}img/features_diff.png">
+        <div class="description right">
+            <h2>Mass collaboration</h2>
+            <p>
+                Built-in versioning saves the history of
+                every article, image, and map.  You can always see who made a change and exactly what was changed.
+            </p>
+        </div>
+    </div>
+    <div class="blurb right">
+        <a href="{% url install %}" class="big_button">Download LocalWiki</a>
+    </div>
+    <h2>and so much more!</h2>
+    <p>
+        <a href="{% url install %}">Download and install</a> our free software to see for yourself.
+    </p>
+</div>
+<div class="section denton">
+    <div class="blurb right trans">
+        <h2>Powered by LocalWiki</h2>
+        <p>
+            <a href="https://dentonwiki.org">Denton Wiki</a>, our first pilot community serving Denton, Texas, is now open to the public.
+        </p>
+        <p>
+            Many more local wikis are being built as we speak, all over the globe.
+        </p>
+    </div>
+</div>
+{% endblock %} 

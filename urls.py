@@ -21,7 +21,9 @@ feeds = {
 from django.views.generic.simple import direct_to_template
 
 urlpatterns = patterns('',
-    (r'^$', direct_to_template, {'template': 'index.html'}),
+    #(r'^$', direct_to_template, {'template': 'index.html'}),
+    url(r'^$', direct_to_template, {'template': 'new_splash.html'}, name='home'),
+    url(r'^install/$', direct_to_template, {'template': 'install.html'}, name='install'),
 
     (r'^signup_thanks', direct_to_template, {'template': 'signup_thanks.html'}),
     (r'^pilot_recommend_thanks', direct_to_template, {'template': 'pilot_recommend_thanks.html'}),
