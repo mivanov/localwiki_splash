@@ -8,26 +8,70 @@ body {
     font-size: 16px;
     text-align: center;
 }
+
+a, a:link {
+    color: #4e58b5;
+}
+a:hover {
+    color: #111;
+}
+
 .header {
-    background: #fff;
+    background: #f3f3f3;
     text-align: left;
     padding: 10px;
+    padding-bottom: 14px;
+    padding-top: 12px;
     margin: auto;
     width: 880px;
 }
-.header .nav {
-    line-height: 60px;
-    height: 60px;
-    float: right;
-    font-size: 20px;
+.header img {
+    margin-left: 10px;
 }
-.header .nav li{
+.header .nav {
+    float: right;
+    margin-top: 10px;
+    margin-right: 0.5em; 
+}
+.footer .nav {
+    height: 2em;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.6em;
+}
+.footer .nav li { margin-top: 1em; }
+.nav li {
     padding: 10px;
     display: inline;
+
+    text-align: center;
+    font-size: 90%;
+    display: block;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    float: left;
+    padding: 0.2em 0.6em 0.4em 0.6em;
+    line-height: 100%;
+    border: 1px solid #e1e1e1;
+    background-color: #e1e1e1;
+    text-decoration: none;
+
+    margin-right: 0.5em;
 }
-.header .nav :link{
+.nav :link, .nav a {
     text-decoration: none !important;
+    color: #444;
 }
+.nav li:hover {
+    background-color: #bfbfbf;
+    border: 1px solid #bfbfbf;
+}
+.nav li a:hover {
+    color: #111;
+}
+
 p, h2, h3 {
     margin-top: 0em;
     margin-bottom: 0.5em;
@@ -47,17 +91,24 @@ h1 {
 }
 div.download {
     height: 300px;
-    background-color: white;
+    background: #fafafa url(../img/body-bg.png) top left repeat;
+}
+div.download .blurb {
+    margin-top: 20px;
 }
 .section.vision {
     background: none;
+}
+.about {
+     width: 490px;
+     float: right;
+     margin-left: 1em;
 }
 .vision h2 {
     font-size: 1.1em;
 }
 .blurb {
     width: 380px;
-    text-shadow: 0 1px 0 white;
 }
 .blurb h2 {
     text-align: center;
@@ -69,9 +120,8 @@ div.download {
     float: left;
 }
 .section {
-    background: white;
+    background: #fafafa url(../img/body-bg.png) top left repeat;
     padding: 15px;
-    padding-top: 30px;
     margin: 0px;
     clear: both;
 }
@@ -82,12 +132,15 @@ div.download {
 }
 .section.features {
     padding: 30px;
-    background: white;
+    background: #fafafa url(../img/body-bg.png) top left repeat;
 }
 .feature img {
     -moz-box-shadow: 0px 4px 8px #888;
     -webkit-box-shadow: 0px 4px 8px #888;
     box-shadow: 0px 4px 8px #888;
+}
+.feature img.left {
+    margin-right: 20px;
 }
 .feature {
     padding-top: 2em;
@@ -95,9 +148,11 @@ div.download {
     clear: both;
 }
 .feature .description {
-    padding-top: 60px;
-    width: 400px;
+    margin-top: 60px;
+    background: #f3f3f3;
+    padding: 20px;
 }
+
 .big_button:link, .big_button:visited {
      display: block;
      margin: auto;
@@ -120,8 +175,9 @@ div.download {
     text-shadow: 0 0 0;
 }
 .bottom {
-    background-color: #757575;
+    background: #757575;
     color: #fff;
+    width: 870px;
 }
 .bottom a, .bottom a:link {
     color: #bfc3f5;
@@ -134,7 +190,7 @@ div.download {
     padding: 0em;
     margin: 0px auto;
     width: 900px;
-    background-image: url(../img/trans_slight.png);
+    background-image: url(../img/trans_more.png);
     background-clip: content-box;
 }
 .content img {
@@ -148,7 +204,7 @@ a.lightbox span {
     background-image: url(../img/magnify.png);
     background-repeat: no-repeat;
     width: 32px;
-    height: 32px;
+    height: 32px
     position: absolute;
     left: 120;
     top: 100;
@@ -158,9 +214,19 @@ a.lightbox span {
     padding: 30px;
     background-image: url('../img/denton.jpg');
     background-repeat: no-repeat;
+    color: #2c2c2c; 
+}
+.section.denton h2 {
+    color: #353535;
+}
+.section.denton .blurb a, .section.denton .blurb a:link {
+    color: #283291;
+}
+.section.denton .blurb a:hover {
+    color: #111;
 }
 .section.install {
-    background: white;
+    background: #fafafa url(../img/body-bg.png) top left repeat;
 }
 .section.install p {
     margin-top: 0.5em;
@@ -200,8 +266,8 @@ div.video {
 }
 .section.bottom {
     padding-top: 15px;
-    height: 310px;
     font-size: 14px;
+    height: 20em;
 }
 div.supporters {
     margin-bottom: 15px;
@@ -211,7 +277,7 @@ div.supporters li {
     padding: 10px;
 }
 div.links {
-    width: 450px;
+    width:350px;
     float: left;
 }
 div.getcode img {
@@ -240,7 +306,7 @@ div.getcode img {
 /* Blog */
 .blog {
   padding: 0 2.5em 5em 2.5em;
-  background: white;
+  background: #fafafa url(../img/body-bg.png) top left repeat;
 }
 
 .blog hr {
@@ -274,4 +340,15 @@ div.getcode img {
 .content_title {
   margin: 2em;
   margin-bottom: 1em;
+}
+
+.footer {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1em;
+  background: #f3f3f3;
+}
+.footer .note {
+  font-size: 80%;
 }
