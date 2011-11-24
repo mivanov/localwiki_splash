@@ -17,7 +17,7 @@
     <div class="item">
       <h3 class="title"><a href="{{ post.get_absolute_url }}" title="{% trans "View this post" %}">{{ post.title }}</a></h3>
       <p class="date">{{ post.publish|date:"Y F d" }}</p>
-      <p class="body">{{ post.body|render_inlines|safe }}</p>
+      <div class="body">{{ post.body|render_inlines|safe }}</div>
     </div>
     {% if not forloop.last %}
        <hr/>

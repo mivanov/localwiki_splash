@@ -1,7 +1,12 @@
 {% extends "base.html" %}
+
+{% block contentClass %}content seethrough{% endblock %}
+
 {% block content %}
+<div class="page">
+
 <div class="section install">
-    <h2>Installing on Ubuntu</h2>
+    <h2 id="title">Installing on Ubuntu</h2>
     <p>
         LocalWiki is available as a prebuilt package for Ubuntu 10.04 LTS or newer.
     </p>
@@ -107,5 +112,6 @@
     <p>
         <a href="/guide">Find a LocalWiki project</a> in your area and collaborate with others to make it happen.
     </p>
+</div>
 </div>
 {% endblock %} 

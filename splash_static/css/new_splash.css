@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "ff-meta-web-pro", Arial, "Helvetica Neue", sans-serif;
     background-image: url(../img/bg_map.png);
     background-repeat: no-repeat;
     background-position: 50% 0%;
@@ -16,35 +16,58 @@ a:hover {
     color: #111;
 }
 
+blockquote {
+  display: block;
+  padding: 1.5em 0 0 2em;
+  width: 23em;
+  color: #6d6d6d;
+  font-size: 130%;
+  line-height: 1.3;
+}
+
+blockquote:before, blockquote:after {
+  color: #69c;
+  display: block;
+  font-size: 300%;
+  width: 50px;
+}
+blockquote:before {
+  content: "“";
+  height: 0;
+  margin-left: -0.45em;
+  float: left;
+  margin-top: -0.7em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
 .header {
-    background: #f3f3f3;
+    background: #f4f4f4 url(../img/header-bg.png) top left repeat;
     text-align: left;
-    padding: 10px;
-    padding-bottom: 14px;
-    padding-top: 12px;
+    padding-bottom: 10px;
+    padding-top: 13px;
     margin: auto;
-    width: 880px;
+    width: 900px;
+    border-bottom: 2px solid #efefef;
 }
 .header img {
-    margin-left: 10px;
+    margin-left: 18px;
 }
 .header .nav {
     float: right;
-    margin-top: 10px;
     margin-right: 0.5em; 
+    margin-top: 8px;
 }
 .footer .nav {
     height: 2em;
     display: table;
+    margin-top: 0.2em;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 0.6em;
+    margin-bottom: 0.8em;
 }
-.footer .nav li { margin-top: 1em; }
+.footer .nav li { margin-top: 1.3em; }
 .nav li {
-    padding: 10px;
-    display: inline;
-
+    padding: 5px 7px 5px 7px!important;
     text-align: center;
     font-size: 90%;
     display: block;
@@ -86,23 +109,32 @@ h1 {
     height: 60px;
 }
 .trans {
-    background-image: url(../img/trans_slight.png);
-    padding: 15px;
+    background-image: url(../img/trans_less.png);
+    padding: 15px 15px 15px 15px;
 }
+
 div.download {
     height: 300px;
     background: #fafafa url(../img/body-bg.png) top left repeat;
 }
 div.download .blurb {
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+div.download h2 {
+    margin-bottom: 20px;
 }
 .section.vision {
     background: none;
 }
+.seethrough .section.vision {
+    padding-top: 0;
+    padding-bottom: 0;
+}
 .about {
      width: 490px;
      float: right;
-     margin-left: 1em;
+     margin-right: 10px;
 }
 .vision h2 {
     font-size: 1.1em;
@@ -149,35 +181,38 @@ div.download .blurb {
 }
 .feature .description {
     margin-top: 60px;
-    background: #f3f3f3;
+    background: #f3f3f3 url(../img/description-bg.png) top left repeat;
     padding: 20px;
 }
 
 .big_button:link, .big_button:visited {
      display: block;
-     margin: auto;
      margin-top: 1em;
      margin-bottom: 1em;
+     margin-left: auto;
+     margin-right: auto;
      width: 190px;
      color: white;
      background-color: #5c6;
      text-align: center;
      text-decoration : none;
-     text-shadow: 0 1px 0 #444;
+     text-shadow: 0 1px 0 #6c6c6c;
      font-weight: bold;
-     padding : 1em;
+     padding: 17px 17px 15px 17px;
  }
 .big_button:hover {
-    text-shadow: 0 1px 2px #444;
+    background-color: #47ac56;
+    color: #f3f3f3;
 }
 .big_button:active {
     color: none;
     text-shadow: 0 0 0;
 }
 .bottom {
-    background: #757575;
+    background: #757575 url(../img/bottom-bg.png) top left repeat;
     color: #fff;
-    width: 870px;
+    width: 900px;
+    display: table-cell;
 }
 .bottom a, .bottom a:link {
     color: #bfc3f5;
@@ -190,9 +225,23 @@ div.download .blurb {
     padding: 0em;
     margin: 0px auto;
     width: 900px;
-    background-image: url(../img/trans_more.png);
     background-clip: content-box;
+    background: #fafafa url(../img/body-bg.png) top left repeat;
 }
+/* We have to do funky stuff here. Needs cleanup TODO */
+.content.front, .content.seethrough {
+    background: none;
+    background-image: url(../img/trans_more.png);
+}
+.content.seethrough .page {
+    padding-left: 0;
+    padding-right: 0;
+}
+.content.seethrough .page .section {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
 .content img {
     border: none;
 }
@@ -217,7 +266,13 @@ a.lightbox span {
     color: #2c2c2c; 
 }
 .section.denton h2 {
-    color: #353535;
+    color: #383838;
+    width: auto;
+    padding: 6px 15px 3px 15px;
+    margin-bottom: 20px;
+}
+.section.denton .blurb {
+    padding-bottom: 4px;
 }
 .section.denton .blurb a, .section.denton .blurb a:link {
     color: #283291;
@@ -225,60 +280,39 @@ a.lightbox span {
 .section.denton .blurb a:hover {
     color: #111;
 }
+.section.denton .right {
+    clear: right;
+}
 .section.install {
     background: #fafafa url(../img/body-bg.png) top left repeat;
+    border: 1px solid #fafafa;
 }
 .section.install p {
     margin-top: 0.5em;
     margin-bottom: 1em;
 }
-.section.install h2 {
-    margin-top: 1.5em;
-}
-table.commands {
-    text-shadow: 0 1px 2px #444;
-    border-spacing: 0.4em;
-    background: #666;
-    width: 100%;
-}
-.commands ul {
-    list-style: none;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin: 0;
-}
-.commands {
-    font-family: Lucida Console, Monaco, monospace;
-    font-size: 18px;
-    font-weight: 600;
-    color: #fff;
-}
-.commands .prompt {
-    padding-left: 5px;
-    width: 26px;
-    color: #AAA;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    user-select: none;
-}
+
 div.video {
     float: left;
 }
 .section.bottom {
     padding-top: 15px;
     font-size: 14px;
-    height: 20em;
 }
 div.supporters {
-    margin-bottom: 15px;
+    margin-bottom: 0;
+    padding-bottom: 0;
     font-size: 14px;
 }
 div.supporters li {
     padding: 10px;
 }
+.otherSupporters {
+}
 div.links {
-    width:350px;
+    width:330px;
     float: left;
+    margin-left: 10px;
 }
 div.getcode img {
     float: left;
@@ -290,6 +324,7 @@ div.getcode img {
 }
 .section.supporters ul {
     margin-bottom: 20px;
+    display: table-cell;
 }
 .section.supporters a {
     color: 444;
@@ -305,36 +340,80 @@ div.getcode img {
 
 /* Blog */
 .blog {
-  padding: 0 2.5em 5em 2.5em;
+  padding: 0.8em 2.5em 1em 2.5em;
   background: #fafafa url(../img/body-bg.png) top left repeat;
 }
 
 .blog hr {
-  color: red;
   height: 1px;
   border: none;
   border-top: 1px dotted #c8c9c1;
-  margin: -0.6em 0 2.3em 0;
+  margin: -0.6em 0 1.5em 0;
 }
 
-.blog li {
-  font-size:0.875em;
+.blog .title {
+  font-size: 170%;
+  margin-bottom: 0;
+}
+.blog .title a, .blog .title a:link {
+  text-decoration: none;
+  color: #444;
+}
+.blog .title a:hover {
+  text-decoration: underline;
+}
+
+.blog .body {
+  margin-top: 0.9em;
+}
+
+.blog .body p {
+  padding-bottom: 0.5em;
+}
+
+.page ol, .blog ol, .page ul, .blog ul {
+  margin-left: 2.5em;
+  margin-bottom: 1.3em;
+  margin-top: 0.5em;
+}
+.page li, .blog li {
   margin-bottom: 0.8em;
+}
+.page ul, .blog ul {
+  list-style-type: disc;
+}
+.page ol, .blog ol {
+  list-style-type: decimal;
 }
 
 .blog h4 { margin-bottom: 0.4em; }
-
-.blog ol, .blog ul {
-  margin-left: 2.5em;
-  margin-bottom: 1em;
-}
 
 .blog .date {
   color: #8f8f8f;
 }
 
-.item {
-  margin-bottom: 3em;
+.blog .item {
+  margin-bottom: 2em;
+  margin-top: 0.6em;
+}
+.pagination a, .pagination a:link {
+    padding: 5px 9px 5px 9px!important;
+    display: table-cell;
+    text-align: center;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    line-height: 100%;
+    border: 1px solid #e1e1e1;
+    background-color: #e1e1e1;
+    text-decoration: none;
+    margin-right: 0.5em;
+    color: #444;
+}
+.pagination a:hover {
+    background-color: #bfbfbf;
+    border: 1px solid #bfbfbf;
+    color: #111;
 }
 
 .content_title {
@@ -347,8 +426,55 @@ div.getcode img {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 1em;
-  background: #f3f3f3;
+  border: 1px solid #fafafa;
+  background: #f4f4f4 url(../img/header-bg.png) top left repeat;
 }
 .footer .note {
   font-size: 80%;
+}
+
+.page {
+  padding: 0 1em 0.5em 1em;
+}
+.page h2, .page h3 {
+    margin-top: 0.7em;
+    margin-bottom: 0.4em;
+    line-height: 1.3;
+}
+.page #title {
+    margin-top: 0.2em; 
+}
+.page .section {
+    padding-bottom: 0;
+}
+
+table.commands {
+    text-shadow: 0 1px 2px #444;
+    border-spacing: 0.4em;
+    background: #666;
+    width: 100%;
+}
+.commands ul {
+    list-style: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0;
+}
+.commands li {
+    margin-bottom: 0;
+}
+.commands {
+    font-family: Lucida Console, Monaco, monospace;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.5em;
+}
+.commands .prompt {
+    padding-left: 5px;
+    width: 26px;
+    color: #AAA;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
 }

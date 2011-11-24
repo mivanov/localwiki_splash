@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="section about">
-    <h2>About LocalWiki</h2>
+<div class="page">
+
+<div class="section overview">
+    <h2 id="title">About LocalWiki</h2>
     <p>
         LocalWiki is a project of Wiki Spot, a 501(c)(3) <a href="http://www2.guidestar.org/organizations/26-1722486/wiki-spot.aspx">nonprofit</a> community improvement organization based in San Francisco, California.
     </p>
@@ -20,9 +22,8 @@
         Phone: +1 (510) 495-1439  (California)
     </p>
 </div>
-<div class="section supporters">
-    <div class="essentialSupporters">
-        <h2><a>Essential Supporters</a></h2>
+<div class="section supporters essentialSupporters">
+        <h2>Essential Supporters</h2>
         <ul>
             <li>
                 <a href="http://www.knightfoundation.org"><img
@@ -61,8 +62,8 @@
                 </div>
             </li>
         </ul>
-    </div>
-    <div class="foundingSupporters">
+  </div>
+  <div class="section supporters foundingSupporters">
         <h2>Founding Supporters</h2>
         <ul>
             <li>
@@ -174,7 +175,7 @@
                 Emily Tung
             </li>
             <li>
-                Cobalt Salon & Gallery
+                Cobalt Salon &amp; Gallery
             </li>
             <li>
                 Dan Ryan
@@ -324,8 +325,8 @@
                 Douglas Walter
             </li>
         </ul>
-    </div>
-    <div class="otherSupporters">
+  </div>
+  <div class="section supporters otherSupporters">
         <h2>Supporters</h2>
         <ul>
             <li>
@@ -1043,7 +1044,7 @@
                 April Johnson
             </li>
             <li>
-                Mike & Raven Pence
+                Mike &amp; Raven Pence
             </li>
             <li>
                 Kim Summerlin
@@ -1343,6 +1344,7 @@
                 </div> </a>
             </li>
         </ul>
-    </div>
+  </div>
+
 </div>
 {% endblock %} 

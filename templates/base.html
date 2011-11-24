@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html>
     <head>
         <title>{% block title %}LocalWiki - Collaborative,
@@ -5,29 +7,29 @@
         <link href='{{ STATIC_URL }}css/reset.css' rel='stylesheet' type='text/css'>
         <link href='{{ STATIC_URL }}css/new_splash.css' rel='stylesheet' type='text/css'>
         <link rel="shortcut icon" href="/static/img/tinylogo_tiny2.png" type="image/png" />
-        <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="http://use.typekit.com/wyu4phv.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        <script type="text/javascript">
+	    	var _gaq = _gaq || [];
+	    	_gaq.push(['_setAccount', 'UA-25465476-3']);
+	    	_gaq.push(['_trackPageview']);
+	    	(function() {
+	    		var ga = document.createElement('script');
+	    		ga.type = 'text/javascript';
+	    		ga.async = true;
+	    		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    		var s = document.getElementsByTagName('script')[0];
+	    		s.parentNode.insertBefore(ga, s);
+	    	})();
+        </script>
     </head>
-    <script type="text/javascript">
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-25465476-3']);
-		_gaq.push(['_trackPageview']);
-		(function() {
-			var ga = document.createElement('script');
-			ga.type = 'text/javascript';
-			ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0];
-			s.parentNode.insertBefore(ga, s);
-		})();
-
-    </script>
     <body>
-        <a href="http://github.com/localwiki/sapling"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/abad93f42020b733148435e2cd92ce15c542d320/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub"></a>
+        <a href="http://github.com/localwiki/localwiki"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/71eeaab9d563c2b3c590319b398dd35683265e85/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub"></a>
         <div class="header">
-            <a href="/"><img src="{{ STATIC_URL }}img/logo.png" style="border: none;" alt="LocalWiki"></a>
             {% include "nav.html" %}
+            <a href="/"><img src="{{ STATIC_URL }}img/logo.png" style="border: none;" alt="LocalWiki"></a>
         </div>
-        <div class="content">
+        <div class="{% block contentClass %}content{% endblock %}">
             {% block content %}{% endblock %}
             <div class="section bottom">
                 <div class="links">
