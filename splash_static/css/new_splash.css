@@ -119,7 +119,6 @@ div.download {
 }
 div.download .blurb {
     margin-top: 30px;
-    margin-right: 10px;
 }
 div.download h2 {
     margin-bottom: 20px;
@@ -153,7 +152,7 @@ div.download h2 {
 }
 .section {
     background: #fafafa url(../img/body-bg.png) top left repeat;
-    padding: 15px;
+    padding: 20px;
     margin: 0px;
     clear: both;
 }
@@ -181,10 +180,13 @@ div.download h2 {
 }
 .feature .description {
     margin-top: 60px;
-    background: #f3f3f3 url(../img/description-bg.png) top left repeat;
     padding: 20px;
 }
-
+.big_button sup {
+    font-weight: 400;
+    position: relative;
+    top: -6px;
+}
 .big_button:link, .big_button:visited {
      display: block;
      margin-top: 1em;
@@ -199,14 +201,31 @@ div.download h2 {
      text-shadow: 0 1px 0 #6c6c6c;
      font-weight: bold;
      padding: 17px 17px 15px 17px;
+     
+     border: 1px solid #BFBFBF;
+    
+     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 1px rgba(255, 255, 255, 0.5) inset;
+     -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 1px rgba(255, 255, 255, 0.5) inset;
+     -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 1px rgba(255, 255, 255, 0.5) inset;
+     
+     border-radius: 4px;
+     -moz-border-radius: 4px;
+     -webkit-border-radius: 4px;
  }
 .big_button:hover {
-    background-color: #47ac56;
-    color: #f3f3f3;
+    background-color: #5fcf6f;
+    text-shadow: 0 1px 0 #555;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15), 0 2px 1px rgba(255, 255, 255, 0.6) inset;
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15), 0 2px 1px rgba(255, 255, 255, 0.6) inset;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15), 0 2px 1px rgba(255, 255, 255, 0.6) inset;
 }
 .big_button:active {
+    position: relative;
+    top: 1px;
     color: none;
-    text-shadow: 0 0 0;
+    box-shadow: 0 0 0, 0 2px 2px rgba(0, 0, 0, 0.05) inset;
+    -moz-box-shadow: 0 0 0, 0 2px 2px rgba(0, 0, 0, 0.05) inset;
+    -webkit-box-shadow: 0 0 0, 0 2px 2px rgba(0, 0, 0, 0.05) inset;
 }
 .bottom {
     background: #757575 url(../img/bottom-bg.png) top left repeat;
