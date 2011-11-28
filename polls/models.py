@@ -17,13 +17,22 @@ class Choice(models.Model):
 		return self.choice
 
 
-class Voter(models.Model):
-	email = models.EmailField()
+class Token(models.Model):
+	token = models.CharField(max_length=7, unique=True)
+	poll = models.ForeignKey(Poll)
+	used = models.BooleanField(default=False)
 
 	def __unicode__(self):
-		return self.email
+		return self.token
 
 
 class Vote(models.Model):
-	voter = models.ForeignKey(Voter)
+	token = models.ForeignKey(Token)
 	choice = models.ForeignKey(Choice)
+
+	def __unicode__(self):
+		return "Token: %s" % self.token.token
+
+class WriteInChoice(models.Model):
+	choice = models.CharField(max_length=200)
+	vote = models.ForeignKey(Vote)

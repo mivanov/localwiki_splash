@@ -3,14 +3,25 @@
 <h3>{{ poll.question }}</h3>
 
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
-
-<form action="/polls/{{ poll.id }}/vote/" method="post">
+<form action="/polls/{{ poll.id }}/" method="post">
 {% csrf_token %}
+{% if token %}
+    <input type="hidden" name="token" value="{{token}}"/>
+{% else %}
+    <p>Your poll token from the email you received: <input type="text" name="token"/></p>
+{% endif %}
+<ul>
 {% for choice in poll.choice_set.all %}
+<li>
     <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
-    <label for="choice{{ forloop.counter }}">{{ choice.choice }}</label><br />
+    {% if choice.choice == "Other" %}
+        <label for="choice{{ forloop.counter }}">{{ choice.choice }}:</label> <input type="text" name="write_in"/>
+    {% else %}
+        <label for="choice{{ forloop.counter }}">{{ choice.choice }}</label>
+    {% endif %}
+</li>
 {% endfor %}
-<p>Your email address (the one you used with Kickstarter): <input type="text" name="email"/></p>
+</ul>
 <input type="submit" value="Vote" />
 </form>
 {% endblock %}

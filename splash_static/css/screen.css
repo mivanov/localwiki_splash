@@ -156,7 +156,7 @@ p {
     border: 2px solid #bababa;
 }
 
-input {
+input[type="text"] {
     border: 2px solid #bababa;
 }
 input[type="submit"] {
@@ -486,4 +486,9 @@ blockquote:before {
   border-top: 1px dotted #b3b3b3;
   width: auto;
   padding-top: 1em;
+}
+
+.poll ul {
+    list-style: none;
+    margin-left: 0;
 }

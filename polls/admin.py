@@ -1,6 +1,6 @@
 from polls.models import Poll
 from polls.models import Choice
-from polls.models import Voter, Vote
+from polls.models import Token, Vote, WriteInChoice
 from django.contrib import admin
 
 class ChoiceInline(admin.TabularInline):
@@ -15,13 +15,18 @@ class PollAdmin(admin.ModelAdmin):
 	list_display   = ('question',)
 	search_fields  = ['question']
 
-class VoterAdmin(admin.ModelAdmin):
-	list_display = ('email',)
+class TokenAdmin(admin.ModelAdmin):
+	list_display = ('token', 'used')
 
 class VoteAdmin(admin.ModelAdmin):
-	list_display = ('voter','choice')
-	readonly_fields = ['voter', 'choice']
+	list_display = ('token','choice')
+	readonly_fields = ['token', 'choice']
+
+class WriteInChoiceAdmin(admin.ModelAdmin):
+	list_display = ('choice', 'vote')
+	readonly_fields = ['choice', 'vote']
 
 admin.site.register(Poll, PollAdmin)
-admin.site.register(Voter, VoterAdmin)
+admin.site.register(Token, TokenAdmin)
 admin.site.register(Vote, VoteAdmin)
+admin.site.register(WriteInChoice, WriteInChoiceAdmin)
