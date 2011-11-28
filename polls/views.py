@@ -18,7 +18,7 @@ def vote(request, poll_id):
 		t = request.GET.get('token', None)
 		return display_poll(request, poll=p, token=t)
 	try:
-		t = Token.objects.get(token=request.POST['token'], poll=p, used=False)
+		t = Token.objects.get(token=request.POST['token'], poll=p)
 	except Token.DoesNotExist:
 		return display_poll(request, poll=p, token=None,
 						error_message="The poll token is invalid.")
