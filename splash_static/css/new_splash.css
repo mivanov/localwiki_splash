@@ -288,13 +288,13 @@ a.lightbox span {
     color: #2c2c2c; 
 }
 .section.denton h2 {
-    color: #383838;
     width: auto;
     padding: 4px 15px 0 15px;
     margin-bottom: 13px;
 }
 .section.denton .blurb {
-    padding-bottom: 4px;
+    padding-bottom: 10px;
+    background-image: url(../img/trans_even_less.png);
 }
 .section.denton .blurb a, .section.denton .blurb a:link {
     color: #283291;
