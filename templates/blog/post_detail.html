@@ -24,7 +24,8 @@
 
 {% block blog_content %}
   {% load blog comments tagging_tags inlines markup %}
-
+  <div class="item">
+  <h3 class="title"><a href="{{ object.get_absolute_url }}" title="{% trans "View this post" %}">{{ object.title }}</a></h3>
   <p class="date">{{ object.publish|date:"j F Y" }}</p>
 
   <div class="body">
@@ -64,4 +65,5 @@
      
     </div>
   {% endif %}
+  </div>
 {% endblock %}
