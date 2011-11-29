@@ -40,6 +40,8 @@ urlpatterns = patterns('',
     (r'^cla/$', create_object, { 'model': LicenseAgreement, 'post_save_redirect': '/cla/thanks/'}),
     (r'^cla/thanks/$', direct_to_template, { 'template': 'contributors/thanks.html'}),
     
+    (r'^polls/', include('polls.urls')),   
+
     # Uncomment the next line to enable the admin:
     (r'^admin/', include(admin.site.urls)),
 )

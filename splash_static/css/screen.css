@@ -155,9 +155,23 @@ p {
 #pilot_recommendation input, #pilot_recommendation textarea {
     border: 2px solid #bababa;
 }
+
+input[type="text"] {
+    border: 2px solid #bababa;
+}
+input[type="submit"] {
+    padding: 10px 20px 10px 20px;
+    font-size: 120%;
+}
+
 #pilot_submit {
     padding: 10px;
     font-size: 120%;
+}
+
+.poll ul {
+    list-style: none;
+    margin-left: 0;
 }
 
 .mission  {

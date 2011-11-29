@@ -97,6 +97,7 @@ INSTALLED_APPS = (
     'basic.inlines',
     'django.contrib.comments',
     'django.contrib.markup',
+    'polls',
 )
 
 BLOG_PAGESIZE = 3
