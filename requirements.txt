@@ -3,3 +3,4 @@ BeautifulSoup>=3.2.0
 -e git://github.com/nathanborror/django-basic-apps.git@171fdbe21a0dbbb38919a383cc265cb3cbc73771#egg=django_basic_apps-dev
 django-tagging>=0.3.1
 wsgiref>=0.1.2
+python-memcached
