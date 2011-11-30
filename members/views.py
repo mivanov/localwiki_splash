@@ -1,6 +1,7 @@
 from django import forms
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
+from django.template import RequestContext
 
 from models import *
 
@@ -22,9 +23,9 @@ class PilotForm(forms.ModelForm):
 def pilot_recommendation(request):
     if request.method == 'GET':
         form = PilotForm()
-        return render_to_response('pilot_recommendation.html', {'form': form})
+        return render_to_response('pilot_recommendation.html', {'form': form}, context_instance=RequestContext(request))
     form = PilotForm(request.POST, request.FILES)
     if not form.is_valid():
-        return render_to_response('pilot_recommendation.html', {'form': form})
+        return render_to_response('pilot_recommendation.html', {'form': form}, context_instance=RequestContext(request))
     form.save()
     return HttpResponseRedirect('/pilot_recommend_thanks')
