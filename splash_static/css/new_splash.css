@@ -504,3 +504,50 @@ table.commands {
     -khtml-user-select: none;
     user-select: none;
 }
+
+/* Images */
+.image_frame {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0.5em
+    margin-bottom: 0.3em;
+    margin-right: 4px;
+    line-height: 1;
+    width: auto;
+}
+.image_frame img {
+    display: block; 
+}
+.image_frame > a {
+    line-height: 0;
+    display: block;
+}
+.image_frame_border, .image_frame_border img {
+    border: 1px solid #cccccc;
+}
+.image_frame_border {
+    padding: 2px;
+}
+.image_left {
+    float: left;
+    clear: left;
+    margin-right: 1.1em;
+    margin-bottom: 0.3em;
+}
+.image_right {
+    float: right;
+    clear: right;
+    margin-left: 1.1em;
+    margin-bottom: 0.3em;
+}
+.image_caption {
+    line-height: 1;
+    display: block;
+    text-align: center;
+    font-size: 80%;
+    margin-top: 0.3em;
+    margin-bottom: 0.4em;
+}
+.image_caption a {
+    display: inline;
+}
