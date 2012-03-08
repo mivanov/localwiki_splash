@@ -551,3 +551,11 @@ table.commands {
 .image_caption a {
     display: inline;
 }
+
+.highlight {
+    text-align: center;
+    padding: 0.95em 0 0.9em 0;
+    background-color: #fffbb5;
+}
+.highlight span {
+}
