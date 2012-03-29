@@ -280,29 +280,29 @@ a.lightbox span {
     left: 120;
     top: 100;
 }
-.section.denton {
+.section.community_highlight {
     height: 240px;
     padding: 30px;
-    background-image: url('../img/denton.jpg');
+    background-image: url('../img/triangle.jpg');
     background-repeat: no-repeat;
     color: #2c2c2c; 
 }
-.section.denton h2 {
+.section.community_highlight h2 {
     width: auto;
     padding: 4px 15px 0 15px;
     margin-bottom: 13px;
 }
-.section.denton .blurb {
+.section.community_highlight .blurb {
     padding-bottom: 10px;
     background-image: url(../img/trans_even_less.png);
 }
-.section.denton .blurb a, .section.denton .blurb a:link {
+.section.community_highlight .blurb a, .section.community_highlight .blurb a:link {
     color: #283291;
 }
-.section.denton .blurb a:hover {
+.section.community_highlight .blurb a:hover {
     color: #111;
 }
-.section.denton .right {
+.section.community_highlight .right {
     clear: right;
 }
 .section.install {
