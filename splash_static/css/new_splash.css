@@ -184,6 +184,11 @@ div.download h2 {
     background: #f3f3f3 url(../img/description-bg.png) top left repeat;
 
 }
+
+.section.highlights .description {
+    background: none;
+}
+
 .big_button sup {
     font-weight: 400;
     position: relative;
