@@ -3,75 +3,6 @@
 {% block contentClass %}content front{% endblock %}
 
 {% block content %}
-<div class="highlight">
-<span>
-Check out <a href="http://localwiki.org/first_year/" target="_blank">the report on our first year!</a>
-</span>
-</div>
-
-<div class="section download">
-    <div class="video">
-        <iframe
-        src="http://player.vimeo.com/video/32534830?title=0&amp;byline=0&amp;portrait=0" width="460" height="293" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
-    </div>
-    <div class="blurb right">
-        <h2>The open-content, open-source effort to share the world's local knowledge</h2>
-        <p>
-        That's our vision. <a href="https://guide.localwiki.org/Communities" target="_blank">Find a LocalWiki project</a> in your area and collaborate with others to make it happen.
-        </p>
-        <a href="https://guide.localwiki.org/Communities" class="big_button" target="_blank">Find a project near you</a>
-    </div>
-</div>
-<div class="section vision">
-    <div class="blurb right">
-        <a href="{% url install %}" class="big_button">Install LocalWiki<sup>beta</sup></a>
-    </div>
-    <h2>Collaborative local media in every community</h2>
-    <p>
-        <a href="{% url install %}">Download and install</a> our free software and get started in your community today!
-    </p>
-</div>
-<div class="section features">
-    <div class="feature">
-        <img class="left" src="{{ STATIC_URL }}img/features_edit.png"/>
-        <div class="description">
-            <h2>Editing for everyone</h2>
-            <p>
-                Simple and powerful editing that requires no training or
-                technical knowledge.  Designed for accessibility and ease of use.
-            </p>
-        </div>
-    </div>
-    <div class="feature">
-        <img class="right" src="{{ STATIC_URL }}img/features_map.png">
-        <div class="description">
-            <h2>Wikis with a sense of place</h2>
-            <p>
-                Beautiful editable maps give context to every article and
-                let you explore your community visually.
-            </p>
-        </div>
-    </div>
-    <div class="feature">
-        <img class="left" src="{{ STATIC_URL }}img/features_diff.png">
-        <div class="description">
-            <h2>Mass collaboration</h2>
-            <p>
-                Built-in versioning saves the history of
-                every article, image, and map.  You can always see who made a change and exactly what was changed.
-            </p>
-        </div>
-    </div>
-    <div class="feature">
-    <div class="blurb right">
-        <a href="{% url install %}" class="big_button">Install LocalWiki<sup>beta</sup></a>
-    </div>
-    <h2>and so much more!</h2>
-    <p>
-        <a href="{% url install %}">Download and install</a> our free software to see for yourself.
-    </p>
-    </div>
-</div>
 <div class="section community_highlight">
     <div class="blurb right trans">
         <h2>Powered by LocalWiki</h2>
@@ -87,6 +18,46 @@ Check out <a href="http://localwiki.org/first_year/" target="_blank">the report 
             Many more local wikis are being built as we speak, all over the globe.
         </p>
     </div>
+</div>
+<div class="section download">
+    <div class="video">
+        <iframe
+        src="http://player.vimeo.com/video/32534830?title=0&amp;byline=0&amp;portrait=0" width="460" height="293" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+    </div>
+    <div class="blurb right">
+        <h2>The open-content, open-source effort to share the world's local knowledge</h2>
+        <p>
+        That's our vision. <a href="https://guide.localwiki.org/Communities" target="_blank">Find a LocalWiki project</a> in your area and collaborate with others to make it happen.
+        </p>
+        <a href="https://guide.localwiki.org/Communities" class="big_button" target="_blank">Find a project near you</a>
+    </div>
+</div>
+<div class="section map">
+    <div id="map"></div>
+    <script type="text/javascript" src="//guide.localwiki.org/static/openlayers/OpenLayers.js?tm=1330130829"></script>
+    <script type="text/javascript" src="//guide.localwiki.org/static/olwidget/js/olwidget.js?tm=1317359250"></script>
+    <script type="text/javascript" src="//guide.localwiki.org/static/js/jquery/jquery-1.7.min.25721ced154b.js"></script>
+    <script type="text/javascript" src="//guide.localwiki.org/static/olwidget/js/sapling_utils.b40008e5e64a.js"></script>
+    <script type="text/javascript" src="//guide.localwiki.org/static/olwidget/js/sapling_cloudmade.577476fa56ab.js"></script>
+    <script type="text/javascript">
+        SaplingMap.init_openlayers();
+        OpenLayers.ImgPath = '//guide.localwiki.org/static/img/openlayers/themes/dark/';
+    
+        olwidget.cachedcloudmade = {map: function() { return new OpenLayers.Layer.CachedCloudMade('CachedCloudMade',
+                ['//map-a.localwiki.org/tile/ca694687020d468283a545db191bcb81/35165/256/',
+                 '//map-b.localwiki.org/tile/ca694687020d468283a545db191bcb81/35165/256/',
+                 '//map-c.localwiki.org/tile/ca694687020d468283a545db191bcb81/35165/256/']) }};
+    
+        $(window).load(function() {
+            var map = new olwidget.Map("map", [
+                    new olwidget.InfoLayer([["SRID=4326;POINT (-88.0017143319804944 43.0386886955516488)", "<a href=\"/Milwaukee_Wiki\">Milwaukee Wiki</a>"], ["SRID=4326;POINT (-116.7636339931255094 32.9434492259793856)", "<a href=\"/San_Diego_Wiki\">San Diego Wiki</a>"], ["SRID=4326;POINT (-88.1972097861770834 40.1025447568945950)", "<a href=\"/CUWiki\">CUWiki</a>"], ["SRID=4326;POINT (-95.9825132959796576 36.1334520191727933)", "<a href=\"/Tulsa_Wiki\">Tulsa Wiki</a>"], ["SRID=4326;POINT (-121.9961924568130627 37.0472406936953931)", "<a href=\"/Santa_Cruz_Wiki\">Santa Cruz Wiki</a>"], ["SRID=4326;POINT (-80.4782345448283110 43.4320373423372104)", "<a href=\"/Kitchener_Wiki\">Kitchener Wiki</a>"], ["SRID=4326;POINT (-78.8604626678100260 35.8411988507643642)", "<a href=\"/Triangle_Wiki\">Triangle Wiki</a>"], ["SRID=4326;POINT (-113.4604216605859932 53.5316874734205683)", "<a href=\"/Edmonton_Wiki\">Edmonton Wiki</a>"], ["SRID=4326;POINT (138.9850594527396197 -35.0402386653028088)", "<a href=\"/Barker_Wiki\">Barker Wiki</a>"], ["SRID=4326;POINT (-83.1262726427375611 42.3622389723110757)", "<a href=\"/DetroitWiki\">DetroitWiki</a>"], ["SRID=4326;POINT (-82.3408396497211186 29.6413623674645841)", "<a href=\"/Gainesville_Wiki\">Gainesville Wiki</a>"], ["SRID=4326;POINT (-84.2733893374915226 30.4517083474404657)", "<a href=\"/TallahasseeWiki\">TallahasseeWiki</a>"], ["SRID=4326;POINT (151.1576661201744685 -33.8647387808666025)", "<a href=\"/Sydney_Wiki\">Sydney Wiki</a>"], ["SRID=4326;POINT (-8.5866591209803325 41.1493882886888329)", "<a href=\"/Porto_Wiki\">Porto Wiki</a>"], ["SRID=4326;POINT (-92.4229351939801518 35.0602819989691099)", "<a href=\"/Conway_Wiki\">Conway Wiki</a>"], ["SRID=4326;POINT (-64.7600833898584085 32.3231641535738916)", "<a href=\"/Bermuda_Wiki\">Bermuda Wiki</a>"], ["SRID=4326;POINT (-121.4648925156361798 38.5853825821066252)", "<a href=\"/Sacramento_Wiki\">Sacramento Wiki</a>"], ["SRID=4326;POINT (-95.3063332962692158 32.3509974432609795)", "<a href=\"/Make_Tyler_Weird\">Make Tyler Weird</a>"], ["SRID=4326;POINT (-122.4427621036009981 37.7627750805507532)", "<a href=\"/San_Francisco_Wiki\">San Francisco Wiki</a>"], ["SRID=4326;POINT (-97.1423670828029060 33.2154876661201257)", "<a href=\"/DentonWiki\">DentonWiki</a>"], ["SRID=4326;POINT (-122.8206126425660187 48.1035694576495416)", "<a href=\"/Port_Townsend_Wiki\">Port Townsend Wiki</a>"], ["SRID=4326;POINT (-122.4847854498482320 47.2519047566569483)", "<a href=\"/Tacoma_Wiki\">Tacoma Wiki</a>"], ["SRID=4326;POINT (-122.2642871081207261 37.8678209035908964)", "<a href=\"/Berkeley_Wiki\">Berkeley Wiki</a>"], ["SRID=4326;POINT (-122.9107182269746232 47.0478297035380422)", "<a href=\"/olywiki\">olywiki</a>"], ["SRID=4326;POINT (-94.4672717450297057 44.3133920170208242)", "<a href=\"/New_Ulm_Wiki\">New Ulm Wiki</a>"]], {"name": "None 0"})
+    
+                ],
+                {"layers": ["cachedcloudmade"], "defaultLon": 35, "mapOptions": {"theme": "//guide.localwiki.org/static/openlayers/theme/sapling/style.css", "controls": ["Navigation", "KeyboardDefaults"]}, "zoomToDataExtentMin": 16, "overlayStyle": {"strokeDashstyle": "solid", "strokeColor": "#db9e33", "fillColor": "#ffc868"}, "mapDivClass": "mapwidget small", "defaultZoom": 2, "defaultLat": 14}
+        );
+        SaplingMap.setup_map(map);
+        });
+    </script>
 </div>
 {% endblock %} 
 

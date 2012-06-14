@@ -314,6 +314,10 @@ a.lightbox span {
     margin-bottom: 1em;
 }
 
+.mapwidget {
+    height: 250px !important;
+}
+
 div.video {
     float: left;
 }

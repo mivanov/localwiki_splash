@@ -23,12 +23,14 @@ from django.views.generic.simple import direct_to_template
 urlpatterns = patterns('',
     #(r'^$', direct_to_template, {'template': 'index.html'}),
     url(r'^$', direct_to_template, {'template': 'new_splash.html'}, name='home'),
+    url(r'^software/$', direct_to_template, {'template': 'software.html'}, name='software'),
     url(r'^install/$', direct_to_template, {'template': 'install.html'}, name='install'),
 
     (r'^signup_thanks', direct_to_template, {'template': 'signup_thanks.html'}),
     (r'^pilot_recommend_thanks', direct_to_template, {'template': 'pilot_recommend_thanks.html'}),
     (r'^faq', direct_to_template, {'template': 'faq.html'}),
     (r'^about', direct_to_template, {'template': 'about.html'}),
+    
 
     (r'^signup/$', 'members.views.signup'),
     (r'^pilot_recommendation/$', 'members.views.pilot_recommendation'),

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block contentClass %}content seethrough{% endblock %}
+
+{% block content %}
+<div class="section features">
+    <div class="feature">
+        <img class="left" src="{{ STATIC_URL }}img/features_edit.png"/>
+        <div class="description">
+            <h2>Editing for everyone</h2>
+            <p>
+                Simple and powerful editing that requires no training or
+                technical knowledge.  Designed for accessibility and ease of use.
+            </p>
+        </div>
+    </div>
+    <div class="feature">
+        <img class="right" src="{{ STATIC_URL }}img/features_map.png">
+        <div class="description">
+            <h2>Wikis with a sense of place</h2>
+            <p>
+                Beautiful editable maps give context to every article and
+                let you explore your community visually.
+            </p>
+        </div>
+    </div>
+    <div class="feature">
+        <img class="left" src="{{ STATIC_URL }}img/features_diff.png">
+        <div class="description">
+            <h2>Mass collaboration</h2>
+            <p>
+                Built-in versioning saves the history of
+                every article, image, and map.  You can always see who made a change and exactly what was changed.
+            </p>
+        </div>
+    </div>
+    <div class="feature">
+    <div class="blurb right">
+        <a href="{% url install %}" class="big_button">Install LocalWiki<sup>beta</sup></a>
+    </div>
+    <h2>and so much more!</h2>
+    <p>
+        <a href="{% url install %}">Download and install</a> our free software to see for yourself.
+    </p>
+    <br/>
+    </div>
+</div>
+{% endblock %} 
