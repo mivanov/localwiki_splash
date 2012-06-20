@@ -162,7 +162,7 @@ div.download h2 {
     font-size: 14px;
 }
 .section.features {
-    padding: 30px;
+    padding: 0 30px 60px 30px;
     background: #fafafa url(../img/body-bg.png) top left repeat;
 }
 .feature img {
@@ -320,7 +320,7 @@ a.lightbox span {
 }
 
 .mapwidget {
-    height: 250px !important;
+    height: 400px !important;
 }
 
 div.video {
@@ -567,4 +567,39 @@ table.commands {
     background-color: #fffbb5;
 }
 .highlight span {
+}
+.section.pilots {
+    margin: 0;
+    padding: 2em 0 0 0;
+    height: 200px;
+}
+.section.pilots div.pilot {
+    width: 300px;
+    height: 200px;
+    float: left;
+}
+div.pilot.santacruz {
+    background-image: url(../img/pilot_santacruz.jpg);
+}
+div.pilot.triangle {
+    background-image: url(../img/pilot_triangle.jpg);
+}
+div.pilot.denton {
+    background-image: url(../img/pilot_denton.jpg);
+}
+.section.pilots .pilot a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+}
+.section.pilots .pilot span.pilot_city {
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 5px 0 5px 0;
+    width: 100%;
+    text-align: center;
+    background-image: url(../img/trans_less.png);
 }
