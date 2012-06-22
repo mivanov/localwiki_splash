@@ -125,10 +125,14 @@ div.download h2 {
 }
 .section.vision {
     background: none;
+    padding-left: 40px;
 }
 .seethrough .section.vision {
     padding-top: 0;
     padding-bottom: 0;
+}
+.section.vision .big_button {
+    margin-top: 0.5em;
 }
 .about {
      width: 470px;
@@ -320,9 +324,27 @@ a.lightbox span {
 }
 
 .mapwidget {
-    height: 400px !important;
+    height: 300px !important;
+    width: 520px !important;
+    margin-left: auto;
+    margin-right: auto;
 }
-
+div.map h2 {
+    font-size: 2em;
+    text-align: center;
+}
+.section.map {
+    text-align: center;
+}
+p.stats {
+    padding: 10px;
+}
+p.stats .num {
+    color: #EA3;
+    text-shadow: 1px 1px 2px #888;
+    font-size: 3em;
+    font-weight: 700;
+}
 div.video {
     float: left;
 }
@@ -417,8 +439,24 @@ div.getcode img {
 .page ul, .blog ul {
   list-style-type: disc;
 }
-.page ol, .blog ol {
+ol {
   list-style-type: decimal;
+}
+.section.start {
+    padding-left: 190px;
+    padding-right: 190px;
+}
+.section.start h2 {
+    text-align: center;
+}
+.start li {
+    padding: 10px 0 10px 0;
+}
+.start .stepnum {
+  font-size: 2.5em;
+  font-weight: 700;
+  padding-right: 15px;
+  vertical-align: middle;
 }
 
 .blog h4 { margin-bottom: 0.4em; }
