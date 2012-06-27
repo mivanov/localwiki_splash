@@ -455,8 +455,7 @@ ol {
   list-style-type: decimal;
 }
 .section.start {
-    padding-left: 190px;
-    padding-right: 190px;
+    padding: 10px 190px 40px 190px;
 }
 .section.start h2 {
     text-align: center;
