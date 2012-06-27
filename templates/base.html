@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-
+{% load static %}
 <html>
     <head>
         <title>{% block title %}LocalWiki - The open-content, open-source effort to share the world's local knowledge{% endblock %}</title>
-        <link href='{{ STATIC_URL }}css/reset.css' rel='stylesheet' type='text/css'>
-        <link href='{{ STATIC_URL }}css/new_splash.css?v=2' rel='stylesheet' type='text/css'>
+        <link href='{% get_static_prefix %}css/reset.css' rel='stylesheet' type='text/css'>
+        <link href='{% get_static_prefix %}css/new_splash.css?v=2' rel='stylesheet' type='text/css'>
         <link rel="shortcut icon" href="/static/img/tinylogo_tiny2.png" type="image/png" />
         <script type="text/javascript" src="http://use.typekit.com/gny4pct.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -28,7 +28,7 @@
         <a href="http://github.com/localwiki/localwiki" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="//s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
         <div class="header">
             {% include "nav.html" %}
-            <a href="/"><img src="{{ STATIC_URL }}img/logo.png" style="border: none;" alt="LocalWiki"></a>
+            <a href="/"><img src="{% get_static_prefix %}img/logo.png" style="border: none;" alt="LocalWiki"></a>
         </div>
         <div class="{% block contentClass %}content{% endblock %}">
             {% block content %}{% endblock %}
@@ -38,7 +38,7 @@
                         <h2>Supported by</h2>
                         <ul>
                             <li>
-                                <a href="http://www.knightfoundation.org/" target="_blank"><img src="{{ STATIC_URL }}img/kflogo.png"></a>
+                                <a href="http://www.knightfoundation.org/" target="_blank"><img src="{% get_static_prefix %}img/kflogo.png"></a>
                             </li>
                             </li>
                             <li>
@@ -49,7 +49,7 @@
                     </div>
                     <div class="code">
                         <h2>Get the code</h2>
-                        <div class="getcode"><img src="{{ STATIC_URL }}img/osi_grayscale.png"/>
+                        <div class="getcode"><img src="{% get_static_prefix %}img/osi_grayscale.png"/>
                             <p>
                                 Our software is free and open-source.  Check out our <a href="https://dev.localwiki.org">developer site</a> for detailed instructions about how to get the software and contribute.
                             </p>

@@ -1,11 +1,17 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block contentClass %}content front{% endblock %}
 
 {% block content %}
+<div class="highlight">
+<span>
+Check out <a href="http://localwiki.org/first_year/" target="_blank">the report on our first year!</a>
+</span>
+</div>
 <div class="section download">
     <div class="video">
-        <img src="{{ STATIC_URL }}img/highlight_scruz.png"/>
+        <img src="{% get_static_prefix %}img/highlight_scruz.png"/>
     </div>
     <div class="blurb right">
         <h2>The open-content, open-source effort to share the world's local knowledge</h2>
@@ -15,30 +21,19 @@
         <a href="https://guide.localwiki.org/Communities" class="big_button" target="_blank">Find a project near you</a>
     </div>
 </div>
-<div class="section pilots">
-    <div class="pilot santacruz">
-        <a href="https://scruzwiki.org"><span class="pilot_city">Santa Cruz, CA</span></a>
-    </div>
-    <div class="pilot triangle">
-        <a href="https://trianglewiki.org"><span class="pilot_city">The Triangle, NC</span></a>
-    </div>
-    <div class="pilot denton">
-        <a href="https://dentonwiki.org"><span class="pilot_city">Denton, TX</span></a>
-    </div>
-</div>
 <div class="section features">
     <div class="feature">
-        <img class="left" height="200" width="300" src="{{ STATIC_URL }}img/features_substance.png"/>
+        <a href="https://scruzwiki.org/Beautiful_Santa_Cruz"><img class="left" height="200" width="300" src="{% get_static_prefix %}img/features_substance.png"/></a>
         <h2>Substance</h2>
         <p>
-            So much of today's web is bite-size, ephemeral, and disposable. We <i>love</i> the web. But when it comes to our local communities, we need a different kind of website &mdash; one that values longevity as well as content.
+            LocalWiki projects are the opposite of today's bite-size, disposable web. They're informative, noncommercial, and built for the long term, by neighbors who simply love their communities.
         </p>
         <p>
             Residents of Santa Cruz, California, are sharing and cataloging the local area's <a href="https://scruzwiki.org/Beautiful_Santa_Cruz">incredible natural beauty</a>. Folks in the Triangle Region in North Carolina are preserving local history by compiling pages about <a href="https://trianglewiki.org/Cary_Historic_Places">historic places</a>.
         </p>
     </div>
     <div class="feature">
-        <img class="left" height="200" width="300" src="{{ STATIC_URL }}img/features_context.png"/>
+        <a href="https://sfwiki.org/map/tags/supervisorialdistrict"><img class="left" height="200" width="300" src="{% get_static_prefix %}img/features_context.png"/></a>
         <h2>Context</h2>
         <p>
             With user editable maps, every page has a real sense of place. And every page contributes to a rich, interlinked local resource that gets better and better over time.
@@ -48,20 +43,21 @@
         </p>
     </div>
     <div class="feature">
-        <img class="left" height="200" width="300" src="{{ STATIC_URL }}img/features_character.png"/>
+        <a href="https://scruzwiki.org/Bizarro_Santa_Cruz"><img class="left" height="200" width="300" src="{% get_static_prefix %}img/features_character.png"/></a>
         <h2>Character</h2>
+        
         <p>
-            Local communities should be free to fully express themselves on the web. That's why every LocalWiki project reflects the unique personality and perspective of its community.
+            Local communities should be free to fully express themselves. That's why every LocalWiki project reflects the unique personality and perspective of its community.
         </p>
         <p>
-            Santa Cruzans document the <a href="https://scruzwiki.org/Bizarro_Santa_Cruz">bizzare and wonderful</a> things that make Santa Cruz what it is. Dentonites discuss the awesome <a href="https://dentonwiki.org/Music_Scene">local music scene</a>. 
+            Santa Cruzans share the <a href="https://scruzwiki.org/Bizarro_Santa_Cruz">bizzare and wonderful</a> things that make Santa Cruz what it is. Dentonites discuss the awesome <a href="https://dentonwiki.org/Music_Scene">local music scene</a>. 
         </p>
     </div>
     <div class="feature">
-        <img class="left" height="200" width="300" src="{{ STATIC_URL }}img/features_community.png"/>
+        <img class="left" height="200" width="300" src="{% get_static_prefix %}img/features_community.png"/>
         <h2>Community</h2>
         <p>
-            LocalWiki projects are inclusive and add some more stuff here.
+            Add some more stuff here.
         </p>
         <br/>
         <br/>
@@ -78,6 +74,17 @@
     <p>
         That's our vision. <a href="https://guide.localwiki.org/Communities">Find a project near you</a> or start your own!
     </p>
+</div>
+<div class="section pilots">
+    <div class="pilot santacruz">
+        <a href="https://scruzwiki.org"><span class="pilot_city">Santa Cruz, CA</span></a>
+    </div>
+    <div class="pilot triangle">
+        <a href="https://trianglewiki.org"><span class="pilot_city">The Triangle, NC</span></a>
+    </div>
+    <div class="pilot denton">
+        <a href="https://dentonwiki.org"><span class="pilot_city">Denton, TX</span></a>
+    </div>
 </div>
 <div class="section map">
     <p class="stats"><span class="num">37</span> independent projects in <span class="num">9</span> countries and <span class="num">7</span> languages  </p>
@@ -100,7 +107,7 @@
             var map = new olwidget.Map("map", [
                  new olwidget.InfoLayer([["SRID=4326;POINT (-88.0017143319804944 43.0386886955516488)", "<a href=\"/Milwaukee_Wiki\">Milwaukee Wiki</a>"], ["SRID=4326;POINT (-116.7636339931255094 32.9434492259793856)", "<a href=\"/San_Diego_Wiki\">San Diego Wiki</a>"], ["SRID=4326;POINT (-88.1972097861770834 40.1025447568945950)", "<a href=\"/CUWiki\">CUWiki</a>"], ["SRID=4326;POINT (-95.9825132959796576 36.1334520191727933)", "<a href=\"/Tulsa_Wiki\">Tulsa Wiki</a>"], ["SRID=4326;POINT (-121.9961924568130627 37.0472406936953931)", "<a href=\"/Santa_Cruz_Wiki\">Santa Cruz Wiki</a>"], ["SRID=4326;POINT (-80.4782345448283110 43.4320373423372104)", "<a href=\"/Kitchener_Wiki\">Kitchener Wiki</a>"], ["SRID=4326;POINT (-78.8604626678100260 35.8411988507643642)", "<a href=\"/Triangle_Wiki\">Triangle Wiki</a>"], ["SRID=4326;POINT (-113.4604216605859932 53.5316874734205683)", "<a href=\"/Edmonton_Wiki\">Edmonton Wiki</a>"], ["SRID=4326;POINT (138.9850594527396197 -35.0402386653028088)", "<a href=\"/BarkerWiki\">BarkerWiki</a>"], ["SRID=4326;POINT (-83.1262726427375611 42.3622389723110757)", "<a href=\"/DetroitWiki\">DetroitWiki</a>"], ["SRID=4326;POINT (-82.3408396497211186 29.6413623674645841)", "<a href=\"/Gainesville_Wiki\">Gainesville Wiki</a>"], ["SRID=4326;POINT (-84.2733893374915226 30.4517083474404657)", "<a href=\"/TallahasseeWiki\">TallahasseeWiki</a>"], ["SRID=4326;POINT (151.1576661201744685 -33.8647387808666025)", "<a href=\"/Sydney_Wiki\">Sydney Wiki</a>"], ["SRID=4326;POINT (-8.5866591209803325 41.1493882886888329)", "<a href=\"/Porto_Wiki\">Porto Wiki</a>"], ["SRID=4326;POINT (-92.4229351939801518 35.0602819989691099)", "<a href=\"/Conway_Wiki\">Conway Wiki</a>"], ["SRID=4326;POINT (-64.7600833898584085 32.3231641535738916)", "<a href=\"/Bermuda_Wiki\">Bermuda Wiki</a>"], ["SRID=4326;POINT (-121.4648925156361798 38.5853825821066252)", "<a href=\"/Sacramento_Wiki\">Sacramento Wiki</a>"], ["SRID=4326;POINT (-95.3063332962692158 32.3509974432609795)", "<a href=\"/Make_Tyler_Weird\">Make Tyler Weird</a>"], ["SRID=4326;POINT (-122.4427621036009981 37.7627750805507532)", "<a href=\"/San_Francisco_Wiki\">San Francisco Wiki</a>"], ["SRID=4326;POINT (-97.1423670828029060 33.2154876661201257)", "<a href=\"/DentonWiki\">DentonWiki</a>"], ["SRID=4326;POINT (-122.8206126425660187 48.1035694576495416)", "<a href=\"/Port_Townsend_Wiki\">Port Townsend Wiki</a>"], ["SRID=4326;POINT (-122.4847854498482320 47.2519047566569483)", "<a href=\"/Tacoma_Wiki\">Tacoma Wiki</a>"], ["SRID=4326;POINT (-122.2642871081207261 37.8678209035908964)", "<a href=\"/Berkeley_Wiki\">Berkeley Wiki</a>"], ["SRID=4326;POINT (-122.9107182269746232 47.0478297035380422)", "<a href=\"/olywiki\">olywiki</a>"], ["SRID=4326;POINT (-94.4672717450297057 44.3133920170208242)", "<a href=\"/New_Ulm_Wiki\">New Ulm Wiki</a>"], ["SRID=4326;POINT (7.8101170615251743 47.4681827490085553)", "<a href=\"/SissachWiki\">SissachWiki</a>"]], {"name": "None 0"})
                 ],
-                {"layers": ["cachedcloudmade"], "defaultLon": 35, "mapOptions": {"controls": ["Navigation", "KeyboardDefaults"]}, "zoomToDataExtentMin": 16, "overlayStyle": {"strokeDashstyle": "solid", "strokeColor": "#444", "strokeOpacity": 0.2, "fillColor": "#eA3", "fillOpacity": 1, "strokeWidth": 0.5, "pointRadius": 3}, "mapDivClass": "mapwidget small", "defaultZoom": 2, "defaultLat": 14}
+                {"layers": ["cachedcloudmade"], "defaultLon": 35, "mapOptions": {"controls": []}, "zoomToDataExtentMin": 16, "overlayStyle": {"strokeDashstyle": "solid", "strokeColor": "#444", "strokeOpacity": 0.2, "fillColor": "#eA3", "fillOpacity": 1, "strokeWidth": 0.5, "pointRadius": 3}, "mapDivClass": "mapwidget small", "defaultZoom": 2, "defaultLat": 14}
         );
         });
     </script>
@@ -111,14 +118,23 @@
         <li><span class="stepnum">1</span>Check the <a href="https://guide.localwiki.org/Communities">LocalWiki directory</a> to see if there is already a project nearby</li>
         <li><span class="stepnum">2</span>Install <a href="{% url software %}">our open-source software</a> to power your project</li>
         <li><span class="stepnum">3</span>Learn about <a href="https://guide.localwiki.org/Starting_a_LocalWiki">getting your project off the ground</a></li>
-        <li>Any problems or questions? Email us at <a href="mailto:contact@localwiki.org">contact@localwiki.org</a></li>
+        <li>Have questions? We're here to help. Email us at <a href="mailto:contact@localwiki.org">contact@localwiki.org</a></li>
     </ul>
+</div>
+<div class="section signup" id="keep_in_touch">
+    <div class="blurb right">
+        {{ form.email.errors }}
+        <form method="POST" action="/signup/#keep_in_touch"><input id="id_email" name="email" maxlength="200" type="text" />
+        <input type="submit" id="signup_submit" value="Sign up" alt="Sign up">
+        </form>
+    </div>
+    <h3>Stay in touch!</h3>
+    <p>
+        Enter your email to receive occasional updates.
+    </p>
 </div>
 {% endblock %} 
 
 {% block attributions %}
 {{ block.super }}
-<p>
-<a href="https://trianglewiki.org/Carpenter_Farm_Supply_Complex" target="_blank">Carpenter Farm Supply Company</a> photo by <a href="https://trianglewiki.org/Hal_Goodtree" target="_blank">Hal Goodtree</a>.
-</p>
 {% endblock %}

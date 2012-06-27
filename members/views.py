@@ -11,7 +11,7 @@ class MemberForm(forms.Form):
 def signup(request):
     form = MemberForm(request.POST)
     if not form.is_valid():
-        return render_to_response('index.html', {'form': form, 'dude':'OMGOMGOMGOMOMGp'})
+        return render_to_response('new_splash.html', {'form': form })
     email = form.cleaned_data['email']
     Member(email=email).save()
     return HttpResponseRedirect('/signup_thanks')
