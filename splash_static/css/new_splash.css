@@ -636,6 +636,14 @@ div.pilot.triangle {
 div.pilot.denton {
     background-image: url(../img/pilot_denton.jpg);
 }
+.section.launched {
+    height: 260px;
+    padding: 0;
+    background-image: url(../img/scruz_banner.jpg);
+}
+.section.launched div.blurb {
+    margin: 2em;
+}
 .section.pilots .pilot a {
     width: 100%;
     height: 100%;
